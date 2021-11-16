@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="container">
+        <h1>Tip Calculator</h1>
+        <hr class="topBorder" />
+        <section class="upper">
+          <div class="bill">
+            <label for="">Bill</label>
+            <input type="number" placeholder="Your bill" id="yourBill" />
+          </div>
+
+          <div>
+            <div class="space-between">
+              <label for="tipInput">Select tip</label>
+              <span id="tipPercent">0%</span>
+            </div>
+            <input
+              type="range"
+              value="0"
+              max="30"
+              id="tipInput"
+              class="range"
+            />
+          </div>
+          <div class="space-between tipText">
+            <span>TIP</span>
+            <span id="tipValue"></span>
+          </div>
+          <hr />
+
+          <div class="space-between total">
+            <span>Total</span>
+            <span id="totalWithTip"></span>
+          </div>
+        </section>
+        <hr class="split" />
+        <section class="lower">
+          <div>
+            <div class="space-between">
+              <label for="">Split</label>
+              <span id="splitValue">No split</span>
+            </div>
+            <input
+              type="range"
+              min="1"
+              max="10"
+              value="1"
+              id="splitInput"
+              class="range"
+            />
+          </div>
+          <div class="space-between lastSection">
+            <span>Bill each</span>
+            <span id="billEach"></span>
+          </div>
+          <div class="space-between lastSection">
+            <span>Tip each</span>
+            <span id="tipEach"></span>
+          </div>
+        </section>
+        <button class="resetBtn" type="submit">Reset</button>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
